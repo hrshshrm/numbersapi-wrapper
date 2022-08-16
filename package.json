@@ -11,10 +11,16 @@
     "dist"
   ],
   "keywords": [
-    "numbersapi"
+    "numbersapi",
+    "wrapper",
+    "numbers",
+    "trivia"
   ],
-  "author": "Harsh Sharma",
-  "homepage": "",
+  "author": {
+    "name": "Harsh Sharma",
+    "url": "https://www.linkedin.com/in/hrshshrm"
+  },
+  "homepage": "https://github.com/hrshshrm/numbersapi-wrapper",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.0.1",
