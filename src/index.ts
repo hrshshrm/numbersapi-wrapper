@@ -9,7 +9,7 @@ import NumbersAPIType from './types/NumbersAPIType.js'
 import handleError from './utils/ErrorHandler.js'
 import getResponse from './utils/Getter.js'
 
-class NumbersAPI {
+export default class NumbersAPI {
     options: NumbersAPIOptions
 
     constructor(options?: NumbersAPIOptions) {
@@ -215,5 +215,3 @@ class NumbersAPI {
         }
     }
 }
-
-export default NumbersAPI

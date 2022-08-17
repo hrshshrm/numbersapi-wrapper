@@ -27,12 +27,6 @@ class NumbersAPIOptions {
         this.json = false
         this.notFound = 'default'
 
-        if (config.protocol) {
-            this.protocol = config.protocol
-        }
-        if (config.hostName) {
-            this.hostName = `://${config.hostName}`
-        }
         if (config.json) {
             this.json = config.json
         }
