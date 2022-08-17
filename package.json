@@ -1,5 +1,5 @@
 {
-  "name": "numbersapi-wrapper",
+  "name": "wrapper-numbersapi",
   "version": "0.1.0",
   "description": "A wrapper library for Numbers API",
   "main": "dist/index.js",
