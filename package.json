@@ -1,8 +1,9 @@
 {
   "name": "wrapper-numbersapi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A wrapper library for Numbers API",
   "main": "dist/index.js",
+  "typings": "types/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc"
@@ -10,6 +11,7 @@
   "files": [
     "dist"
   ],
+  "types": "types/index.d.ts",
   "keywords": [
     "numbersapi",
     "wrapper",

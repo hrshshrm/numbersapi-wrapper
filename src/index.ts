@@ -44,7 +44,7 @@ export default class NumbersAPI {
     }
 
     async getTrivia(
-        num: NumbersAPIType["number"],
+        num: NumbersAPIType["number"] | NumbersAPIType["date"],
         type: NumbersAPIType["types"],
         callback?: (
             result: any,
@@ -53,7 +53,7 @@ export default class NumbersAPI {
     ): Promise<any> {
         try {
             if (num) {
-                // If the user has submitted a Number or an 'random', return the JSON promise
+                // If the user has submitted a Number or an 'random', return the String or JSON promise
                 if (
                     typeof num === 'number' ||
                     num === 'random'
@@ -87,7 +87,7 @@ export default class NumbersAPI {
     ): Promise<any> {
         try {
             if (num) {
-                // If the user has submitted a Number or an 'random', return the JSON promise
+                // If the user has submitted a Number or an 'random', return the String or JSON promise
                 if (
                     typeof num === 'number' ||
                     num === 'random'
@@ -121,7 +121,7 @@ export default class NumbersAPI {
     ): Promise<any> {
         try {
             if (num) {
-                // If the user has submitted a Number or an 'random', return the JSON promise
+                // If the user has submitted a Number or an 'random', return the String or JSON promise
                 if (
                     typeof num === 'number' ||
                     num === 'random'
@@ -155,7 +155,7 @@ export default class NumbersAPI {
     ): Promise<any> {
         try {
             if (num) {
-                // If the user has submitted a Number or an 'random', return the JSON promise
+                // If the user has submitted a Number or an 'random', return the String or JSON promise
                 if (
                     typeof num === 'number' ||
                     num === 'random'
@@ -189,8 +189,8 @@ export default class NumbersAPI {
     ): Promise<any> {
         try {
             if (num) {
-                const checkDate = moment(num, 'MM/DD',true).isValid()
-                // If the user has submitted a Number or an 'random', return the JSON promise
+                const checkDate = moment(num, 'MM/D',true).isValid()
+                // If the user has submitted a Number or an 'random', return the String or JSON promise
                 if (
                     checkDate ||
                     num === 'random'
@@ -202,12 +202,12 @@ export default class NumbersAPI {
                     )
                 } else {
                     throw new Error(
-                        'Param "num" is required (Must be a of format "DD/MM" or the string "random")'
+                        'Param "num" is required (Must be a of format "MM/DD" or the string "random")'
                     )
                 }
             } else {
                 throw new Error(
-                    'Param "num" is required (Must be a of format "DD/MM" or the string "random")'
+                    'Param "num" is required (Must be a of format "MM/DD" or the string "random")'
                 )
             }
         } catch (error) {
