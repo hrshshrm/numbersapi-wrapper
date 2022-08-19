@@ -24,33 +24,21 @@ $ await nums.getNumberTrivia(123)
 
 Available Methods
 
-- **getNumberTrivia(input)** :
-To fetch trivia for a given number.
-<br>
-input: 'random' OR any number
-<br>
-example: getNumberTrivia(123)
+- **getNumberTrivia(input)** : To fetch trivia for a given number.  
+  input: 'random' OR any number.  
+  example: getNumberTrivia(123)
 
-- **getMathTrivia(input)** :
-To fetch mathematical trivia for a given number.
-<br>
-input: 'random' OR any number
-<br>
-example: getNumberTrivia(144)
+- **getMathTrivia(input)** : To fetch mathematical trivia for a given number.  
+  input: 'random' OR any number.  
+  example: getNumberTrivia(144)
 
-- **getYearTrivia(input)** :
-To fetch trivia for a given year.
-<br>
-input: 'random' OR any year
-<br>
-example: getNumberTrivia(2022)
+- **getYearTrivia(input)** : To fetch trivia for a given year.  
+  input: 'random' OR any year.  
+  example: getNumberTrivia(2022)
 
-- **getDateTrivia(input)** :
-To fetch trivia for a given date.
-<br>
-input: 'random' OR any string in format 'MM/DD'
-<br>
-example: getNumberTrivia('12/25')
+- **getDateTrivia(input)** : To fetch trivia for a given date.  
+  input: 'random' OR any string in format 'MM/DD".  
+  example: getNumberTrivia('12/25')
 
 ## Future Developments
 
