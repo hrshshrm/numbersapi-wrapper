@@ -1,3 +1,5 @@
+declare module 'wrapper-numbersapi'
+
 export class NumbersAPIOptions {
     /** The protocol to be used
      * @default 'http'
