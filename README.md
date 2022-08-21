@@ -30,15 +30,15 @@ Available Methods
 
 - **getMathTrivia(input)** : To fetch mathematical trivia for a given number.  
   input: 'random' OR any number.  
-  example: getNumberTrivia(144)
+  example: getMathTrivia(144)
 
 - **getYearTrivia(input)** : To fetch trivia for a given year.  
   input: 'random' OR any year.  
-  example: getNumberTrivia(2022)
+  example: getYearTrivia(2022)
 
 - **getDateTrivia(input)** : To fetch trivia for a given date.  
   input: 'random' OR any string in format 'MM/DD".  
-  example: getNumberTrivia('12/25')
+  example: getDateTrivia('12/25')
 
 ## Future Developments
 
