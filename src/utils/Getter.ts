@@ -12,6 +12,17 @@ async function getResponse<T>(
         baseURL: `${values.protocol}${values.hostName}/`,
     }
     try {
+        if(values.cacheEnabled && values.cache) {
+            const cachedResult = values.cache.get(url);
+
+            if (cachedResult) {
+                if (callback) {
+                    callback(cachedResult);
+                }
+                return cachedResult;
+            }
+        }
+
         const response: AxiosResponse<T, any> = await axios.get<T>(url, options)
 
         if (response.status !== 200) {
@@ -21,6 +32,10 @@ async function getResponse<T>(
             // cache the object in memory-cache
             // only if cacheLimit > 0
             const responseData = response.data
+
+            if (values.cache && values.cacheDuration) { 
+                values.cache.set<T>(url, responseData, values.cacheDuration);
+            }
 
             // If a callback is present
             if (callback) {
