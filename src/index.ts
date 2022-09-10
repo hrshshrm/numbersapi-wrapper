@@ -189,7 +189,7 @@ export default class NumbersAPI {
     ): Promise<any> {
         try {
             if (num) {
-                const checkDate = moment(num, 'MM/D',true).isValid()
+                const checkDate = moment(num, 'M/D',true).isValid()
                 // If the user has submitted a Number or an 'random', return the String or JSON promise
                 if (
                     checkDate ||
@@ -212,6 +212,18 @@ export default class NumbersAPI {
             }
         } catch (error) {
             handleError(error, callback)
+        }
+    }
+
+    getCachedItemsCount() {
+        if(this.options.cacheEnabled && this.options.cache) {
+            return this.options.cache.getStats();
+        }
+    }
+
+    clearCache(): void {
+        if(this.options.cacheEnabled && this.options.cache) {
+            this.options.cache.flushAll();
         }
     }
 }

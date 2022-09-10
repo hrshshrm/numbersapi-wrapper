@@ -17,6 +17,18 @@ export class NumbersAPIOptions {
      * @default 'default'
      */
     notFound?: 'default' | 'ceil' | 'floor';
+    cache?: NodeCache;
+    /** The json boolean of the NumbersAPI instance
+     * @default NodeCache
+     */
+    cacheEnabled?: boolean;
+    /** The json boolean of the NumbersAPI instance
+     * @default false
+     */
+    cacheDuration?: number;
+    /** The json boolean of the NumbersAPI instance
+     * @default 120 * 1000 // 120 seconds
+     */
     constructor(config?: NumbersAPIOptions);
 }
 
@@ -34,4 +46,6 @@ export default class NumbersAPI {
     getMathTrivia(num: NumbersAPIType["number"], callback?: (result: any, error?: any) => any): Promise<any>;
     getYearTrivia(num: NumbersAPIType["number"], callback?: (result: any, error?: any) => any): Promise<any>;
     getDateTrivia(num: NumbersAPIType["date"] | 'random', callback?: (result: any, error?: any) => any): Promise<any>;
+    clearCache(): void;
+    getCachedItemsCount(): any;
 }
